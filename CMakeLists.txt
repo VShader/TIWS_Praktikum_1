@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(Graph)
 
+set(CMAKE_BUILD_TYPE "Debug")
+
 set(GRAPH_PATH "${CMAKE_CURRENT_SOURCE_DIR}/graph")
 include_directories(${GRAPH_PATH})
 file(GLOB GRAPH_SOURCES "${GRAPH_PATH}/*.cpp")

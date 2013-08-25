@@ -8,6 +8,6 @@ public:
 //    Graph();
     void loadMatrix(std::string path);
 private:
-    std::map<int, std::vector<int> > adjacencyMatrix;
+    std::map<int, std::vector<char> > adjacencyMatrix;
     int edge;
 };

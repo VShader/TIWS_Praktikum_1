@@ -6,6 +6,6 @@ using namespace std;
 int main()
 {
     Graph test;
-    test.loadMatrix("Adjacency Matrix");
+    test.loadMatrix("Adjacency Matrix.txt");
     return 0;
 }
