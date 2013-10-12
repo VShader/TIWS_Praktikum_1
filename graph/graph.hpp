@@ -6,8 +6,8 @@ class Graph
 {
 public:
 //    Graph();
-    void loadMatrix(std::string path);
+    bool loadMatrix(std::string path);
 private:
-    std::map<int, std::vector<char> > adjacencyMatrix;
+    std::map<int, std::vector<int> > adjacencyList;
     int edge;
 };
