@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     Graph test;
-    test.loadMatrix("Adjacency Matrix.txt");
+//    test.fileInput("Adjacency Matrix.txt");
+    test.keyboardInput();
     return 0;
 }
