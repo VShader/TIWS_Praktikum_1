@@ -10,12 +10,14 @@ bool Graph::fileInput(std::string path)
         std::cerr << "Can not load \"" << path << "\"" << std::endl;
         return 1;
     }
+    this->adjacencyList.clear();
     for(unsigned int pos=0; input;)
     {
-        if(this->loadMatrix(input, pos))
+        if(this->readEdge(input, pos))
         {
             this->adjacencyList.clear();
             input.close();
+            std::cerr << "File corrupted!!!";
             return 1;
         }
     }
@@ -29,14 +31,15 @@ bool Graph::keyboardInput()
     this->adjacencyList.clear();
     for(unsigned int pos=0; std::cin;)
     {
-        if(this->loadMatrix(std::cin, pos))
+        if(this->readEdge(std::cin, pos))
         {
             char quit='q';
             char test;
             std::cin >> test;
             if(test!=quit)
             {
-                std::cerr << "Wrong Character only Integer are allowed!!!\n";
+                this->adjacencyList.clear();
+                std::cerr << "Wrong character, only integers are allowed!!!\n";
                 return 1;
             }
             else return 0;
@@ -46,7 +49,7 @@ bool Graph::keyboardInput()
 }
 
 
-bool Graph::loadMatrix(std::istream &input, unsigned int &pos)
+bool Graph::readEdge(std::istream &input, unsigned int &pos)
 {
     int inputInt;
 
