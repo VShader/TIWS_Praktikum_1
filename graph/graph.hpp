@@ -24,11 +24,21 @@ public:
      * \return succes if 0 else something went wrong
      */
     bool keyboardInput();
+    /*!
+     * \brief recursivDephSearch
+     * \param position
+     * \return succes if 0 else something went wrong
+     */
+    bool recursiveDepthSearch(int position, int destination);
 private:
     /*!
      * \brief adjacencyList
      */
     std::map<int, std::vector<int> > adjacencyList;
+    /*!
+     * \brief knot
+     */
+    std::vector<bool> knot;
 
     /*!
      * \brief readEdge

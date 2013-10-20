@@ -8,7 +8,8 @@ set(GRAPH_PATH "${CMAKE_CURRENT_SOURCE_DIR}/graph")
 include_directories(${GRAPH_PATH})
 
 set(GRAPH_SOURCES main.cpp
-    "${GRAPH_PATH}/loadMatrix.cpp")
+    "${GRAPH_PATH}/loadMatrix.cpp"
+    "${GRAPH_PATH}/graph.cpp")
 set(GRAPH_HEADERS "${GRAPH_PATH}/graph.hpp")
 set(TXTDAT "Adjacency Matrix.txt")
 
