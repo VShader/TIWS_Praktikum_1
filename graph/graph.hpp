@@ -25,11 +25,12 @@ public:
      */
     bool keyboardInput();
     /*!
-     * \brief recursivDephSearch
-     * \param position
+     * \brief dephSearch
+     * \param position, destination
      * \return succes if 0 else something went wrong
      */
-    bool recursiveDepthSearch(int position, int destination);
+    bool depthSearch(int poisition, int destination);
+
 private:
     /*!
      * \brief adjacencyList
@@ -53,6 +54,12 @@ private:
      * \return succes if 0 else something went wrong or quit
      */
     bool deleteCommentary(std::istream &input);
+    /*!
+     * \brief recursivDephSearch
+     * \param position, destination
+     * \return succes if 0 else something went wrong
+     */
+    bool recursiveDepthSearch(int position, int &destination);
 };
 
 #endif // GRAPH_HPP

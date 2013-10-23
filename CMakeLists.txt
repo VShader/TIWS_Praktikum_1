@@ -3,7 +3,7 @@ project(Graph)
 
 set(CMAKE_BUILD_TYPE "Debug")
 
-set(WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+set(RUN_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 set(GRAPH_PATH "${CMAKE_CURRENT_SOURCE_DIR}/graph")
 include_directories(${GRAPH_PATH})
 
