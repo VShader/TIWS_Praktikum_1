@@ -1,6 +1,6 @@
+#include "graph.hpp"
 #include <iostream>
 #include <limits>
-#include "graph.hpp"
 
 bool Graph::fileInput(std::string path)
 {

@@ -29,7 +29,7 @@ public:
      * \param position, destination
      * \return succes if 0 else something went wrong
      */
-    bool depthSearch(int poisition, int destination);
+    bool depthSearch(int position, int destination);
 
 private:
     /*!
@@ -39,7 +39,7 @@ private:
     /*!
      * \brief knot
      */
-    std::vector<bool> knot;
+    std::vector<unsigned int> knot;
 
     /*!
      * \brief readEdge
